@@ -1,0 +1,172 @@
+<!--pages/addexp/addexp.wxml-->
+<view class='addexp'>
+  <form bindsubmit="formSubmit" class='add-wrapper'>
+    <view class='add-content'>
+      <!-- 地点 -->
+      <view class="base-item">
+        <view class="base-title">
+          地点
+        </view>
+        <view class='base-action'>
+          <picker mode="region" value="{{region}}" bindchange="bindPositionChange">
+          <view class="picker" 
+          wx:if="{{region[0]!==null}}" >{{region[0]}}，{{region[1]}}，{{region[2]}}</view>
+          <view class="picker" wx:else>{{defaultSelect}}</view> 
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+
+        </view>
+
+      </view>
+      <!-- 职位 -->
+      <view class="base-item">
+        <view class="base-title">
+          职位
+        </view>
+        <view class='base-action'>
+          <view class="phone">
+            <input placeholder="请填写"  
+            maxlength='10' value='{{name}}'  
+            focus="{{focus}}"  bindchange="name" name="name2" />
+          </view>
+        </view>
+      </view>
+      <!-- 薪资类型 -->
+      <view class="base-item">
+        <view class="base-title">
+          薪资类型
+        </view>
+        <view class='base-action'>
+          <picker value="{{index}}" bindchange="bindeTypeChange" range="{{types}}">
+           <view class="picker" 
+          wx:if="{{wageType}}" >{{wageType}}</view>
+
+          <view class="picker" wx:else>{{types[index]}}</view> 
+            <!-- <view class="picker"> -->
+              <!-- {{types[index]}} -->
+              <!-- {{wageType}} -->
+            <!-- </view> -->
+            
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+        </view>
+      </view>
+      <!-- 期望薪资 -->
+      <view class="base-item">
+        <view class="base-title">
+          期望薪资
+        </view>
+        <view class='base-action'>
+          <picker value="{{inner}}" bindchange="bindeCashChange" range="{{cashs}}">
+            <!-- <view class="picker"> -->
+              <!-- {{cashs[inner]}} -->
+              <!-- {{expectedSalary}} -->
+            <!-- </view> -->
+              <view class="picker" 
+              wx:if="{{expectedSalary}}"> {{expectedSalary}}</view>
+          <view class="picker" wx:else>{{cashs[inner]}}</view> 
+
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+        </view>
+      </view>
+      <!-- 工作类型 -->
+      <view class="base-item">
+        <view class="base-title">
+          工作类型
+        </view>
+        <view class='base-action'>
+          <picker bindchange="bindStatusChange" value="{{lip}}" range="{{status}}">
+
+             <view class="picker" 
+          wx:if="{{jobType}}" > {{jobType}}</view>
+          <view class="picker" wx:else>{{status[lip]}}</view> 
+            <!-- <view class="picker"> -->
+              <!-- {{status[lip]}} -->
+              <!-- {{jobType}} -->
+            <!-- </view> -->
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+
+        </view>
+
+      </view>
+
+      <!-- 行业 -->
+      <view class="base-item">
+        <view class="base-title">
+          行业
+        </view>
+        <view class='base-action'>
+          <view class="phone">
+            <input placeholder="请填写" maxlength='20' value='{{industry2}}'   bindchange="industry " name="industry2" />
+          </view>
+        </view>
+      </view>
+      <!-- 到岗时间 -->
+      <view class="base-item">
+        <view class="base-title">
+          到岗时间
+        </view>
+        <view class='base-action'>
+          <picker bindchange="bindStateChange" mode="date" value="{{date}}" start="1915-09-01" end="2037-09-01">
+          <view class="picker" 
+          wx:if="{{arriveTime}}" > {{arriveTime}}</view>
+          <view class="picker" wx:else>{{arriveTime}}</view> 
+            <!-- <view class="picker">
+              {{arriveTime}}
+            </view> -->
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+
+        </view>
+
+      </view>
+      <!-- 自我评价 -->
+      <view class="base-item">
+        <view class="base-title">
+          自我评价
+        </view>
+        <view class='base-action' bindtap='descR'>
+          <view class="picker">
+            <text class='text-count'>已填写{{length}}字</text>
+          </view>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+        </view>
+      </view>
+
+
+
+    </view>
+
+    <!-- 保存 -->
+    <view class='add-bt'>
+      <button class="btn-click" formType="submit"> 保存 </button>
+    </view>
+
+  </form>
+</view>

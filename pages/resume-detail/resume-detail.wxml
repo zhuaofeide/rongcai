@@ -1,0 +1,11 @@
+<!--pages/resume-detail/resume-detail.wxml-->
+<view>
+  <view class='resume-content'>
+    <view class='resume-wrapper'>
+    </view>
+    <view class='resume-box'>
+            <button class=" btn-view" hover-class="btn-view-hover" bindtap="backInfor"> 重选 </button>
+              <button class="btn-click" bindtap="saveInfor"> 确定 </button>
+    </view>
+  </view>  
+</view>

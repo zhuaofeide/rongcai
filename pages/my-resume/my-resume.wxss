@@ -1,0 +1,125 @@
+/* pages/my-resume/my-resume.wxss */
+
+.content {
+  padding: 40rpx 20rpx 130rpx 20rpx;
+}
+
+.item {
+  border-radius: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  background: #fff;
+  margin-bottom: 40rpx;
+}
+
+.title {
+  background: #1c95ec;
+  text-align: left;
+  padding: 20rpx;
+  border-top-right-radius:30rpx; 
+  border-top-left-radius:30rpx;
+}
+
+.title-txt {
+  color: #fff;
+  font-size: 36rpx;
+  line-height: 48rpx;
+}
+
+.item-wrapper {
+  background: #f5f5f5;
+  padding: 30rpx 20rpx;
+}
+.item-box{
+    display: flex;
+}
+.red{
+  display: none;
+}
+.blue{
+  display: block !important;
+}
+.avator {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.mid {
+  margin-left: 20rpx;
+  display: flex;
+  flex: 1 0 auto;
+
+  flex-direction: column;
+  justify-content: space-between;
+}
+.resume-img{
+  width: 100%;
+  height: 300rpx;
+}
+.name {
+  font-size: 36rpx;
+  line-height: 48rpx;
+  color: #333;
+}
+
+
+
+.tip {
+  font-size: 32rpx;
+  line-height: 48rpx;
+  color: #333;
+  margin-right: 20rpx;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 60rpx;
+  margin-bottom:30rpx;  
+  background: #ddd;
+}
+
+.clear, .show {
+  font-size: 34rpx;
+  line-height: 80rpx;
+  display: block;
+}
+
+.clear {
+  color: #666;
+}
+
+.show {
+  color: #1c95ec;
+}
+.entery-btn {
+  position: fixed;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  padding: 20rpx;
+  background: #fff;
+}
+
+.btn-click {
+  background-color: #349fec;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 36rpx;
+  width: 95%;
+}
+
+.button-hover {
+  background-color: #1c95ec;
+}
+.creat-time,.creat-path{
+  font-size: 36rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10rpx 0;
+}

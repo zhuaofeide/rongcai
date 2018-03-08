@@ -1,0 +1,107 @@
+<!--pages/addpro/addpro.wxml-->
+<view class='addexp'>
+  <form bindsubmit="formSubmit" class='add-wrapper'>
+    <view class='add-content'>
+      <!-- 开始时间 -->
+      <view class="base-item">
+        <view class="base-title">
+          开始时间
+        </view>
+        <view class='base-action'>
+          <picker mode="date" value="{{date}}" start="1900-09-01" end="2037-09-01" bindchange="bindDateChange">
+            <view class="picker">
+              {{sdate}}
+            </view>
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+
+        </view>
+
+      </view>
+      <!-- 结束时间 -->
+      <view class="base-item">
+        <view class="base-title">
+          结束时间
+        </view>
+        <view class='base-action'>
+          <picker mode="date" value="{{date}}" start="1900-09-01" end="2037-09-01" bindchange="bindeDateChange">
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+        </view>
+      </view>
+      <!-- 项目名称 -->
+      <view class="base-item">
+        <view class="base-title">
+          项目名称
+        </view>
+        <view class='base-action'>
+          <view class="phone">
+            <input placeholder="请填写" focus="{{focus}}" value="{{itemName}}" bindchange="bindKeyInput" />
+          </view>
+        </view>
+      </view>
+
+      <!-- 项目描述 -->
+      <view class="base-item">
+        <view class="base-title">
+          项目描述
+        </view>
+        <view class='base-action' bindtap='descP'>
+          <view class="picker">
+            <text class='text-count'>已填写{{length}}字</text>
+          </view>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+        </view>
+      </view>
+
+           <!-- 责任描述 -->
+      <view class="base-item">
+        <view class="base-title">
+          责任描述
+        </view>
+        <view class='base-action' bindtap='descR'>
+          <view class="picker">
+            <text class='text-count'>已填写{{length2}}字</text>
+          </view>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+        </view>
+      </view>
+      <!-- 所属公司 -->
+      <view class="base-item">
+        <view class="base-title">
+          所属公司
+        </view>
+        <view class='base-action'>
+          <view class="phone">
+            <input placeholder="请填写" focus="{{focus}}" value="{{company}}" bindchange="bindKeyCompany" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 保存 -->
+    <view class='add-bt'>
+      <button class="btn-click" formType="submit"> 保存 </button>
+    </view>
+
+  </form>
+</view>

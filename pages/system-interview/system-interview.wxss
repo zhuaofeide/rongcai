@@ -1,0 +1,75 @@
+/* pages/validation/validation.wxss */
+
+.valid-content {
+  padding: 60rpx;
+}
+
+.valid-item {
+  padding: 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  background: #fff;
+  border-radius: 50rpx;
+  margin-bottom: 20rpx;
+}
+
+.icon-img {
+  width: 50rpx;
+  height: 1.4rem;
+}
+
+.valid-code-img {
+  display: flex;
+  background: #fff;
+  border-radius: 50rpx;
+  padding: 20rpx;
+  margin-right:20rpx; 
+}
+
+.valid-code {
+  display: flex;
+  margin-bottom: 20rpx;
+  padding: 20rpx 0;
+}
+
+.valid-input {
+   width: 100%; 
+  color: #000;
+   font-size: 36rpx; 
+  /* height: 50rpx;
+   line-height: 50rpx;  */
+   padding-left:10rpx;  
+}
+
+/* 按钮 */
+
+.add-bt {
+  padding: 20rpx 0;
+  background: #fff;
+}
+
+.btn-click {
+  background-color: #349fec;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 36rpx;
+  width: 85%;
+  margin-top:30rpx; 
+}
+
+.button-hover {
+  background-color: #1c95ec;
+}
+
+.valid-btn {
+  background-color: #349fec;
+  color: #fff;
+  border-radius: 30px;
+   font-size: 36rpx; 
+  /* padding: 10rpx 0; */
+  width: 60%;
+}
+
+.button-hover {
+  background-color: #1c95ec;
+}

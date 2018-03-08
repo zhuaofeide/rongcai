@@ -1,0 +1,105 @@
+<!--pages/addexp/addexp.wxml-->
+<view class='addexp'>
+  <form bindsubmit="formSubmit" class='add-wrapper'>
+    <view class='add-content'>
+      <!-- 入学时间 -->
+      <view class="base-item">
+        <view class="base-title">
+          入学时间
+        </view>
+        <view class='base-action'>
+          <picker mode="date" value="{{date}}" start="1900-09-01" end="2037-09-01" bindchange="bindDateChange">
+            <view class="picker">
+              {{sdate}}
+            </view>
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+
+        </view>
+
+      </view>
+      <!-- 毕业时间 -->
+      <view class="base-item">
+        <view class="base-title">
+          毕业时间
+        </view>
+        <view class='base-action'>
+          <picker mode="date" value="{{date}}" start="1900-09-01" end="2037-09-01" bindchange="bindeDateChange">
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+        </view>
+      </view>
+      <!-- 学校 -->
+      <view class="base-item">
+        <view class="base-title">
+          学校
+        </view>
+        <view class='base-action'>
+          <view class="phone">
+            <input placeholder="请填写" focus="{{focus}}" value='{{school}}' bindchange="bindKeySchool"  />
+          </view>
+        </view>
+      </view>
+      <!-- 学历 -->
+      <view class="base-item">
+        <view class="base-title">
+          学历
+        </view>
+        <view class='base-action'>
+          <view class="phone">
+            <input placeholder="请填写" focus="{{focus}}" value='{{education}}'  bindchange="bindKeyEducation"/>
+          </view>
+        </view>
+      </view>
+      <!-- 专业 -->
+      <view class="base-item">
+        <view class="base-title">
+          专业
+        </view>
+        <view class='base-action'>
+          <view class="phone">
+            <input placeholder="请填写" focus="{{focus}}" value='{{major}}'  bindchange="bindKeyMajor"/>
+          </view>
+        </view>
+      </view>
+ 
+      <!-- 留学经历 -->
+      <view class="base-item">
+        <view class="base-title">
+          留学经历
+        </view>
+        <view class='base-action'>
+          <picker bindchange="bindStatusChange" value="{{lip}}" range="{{status}}">
+            <view class="picker">
+              {{studyExperience}}
+            </view>
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+
+        </view>
+
+      </view>
+    </view>
+
+    <!-- 保存 -->
+    <view class='add-bt'>
+      <button class="btn-click" formType="submit"> 保存 </button>
+    </view>
+
+  </form>
+</view>

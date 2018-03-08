@@ -1,0 +1,65 @@
+<!--pages/my-resume/my-resume.wxml-->
+<view class='wrapper'>
+  <view class='content'>
+
+    <block  class='item' wx:for="{{post_key}}" wx:key="{{post_key}}" >
+<!-- 手动录入 -->
+        <view class='title' wx:if="{{item.source==1}}">
+          <text class='title-txt'>{{item.position}}</text>
+        </view>
+<!-- 系统导入 -->
+        <view class='title' wx:if="{{item.source==3}}">
+          <text class='title-txt'>融才系统简历</text>
+        </view>
+    
+        
+       
+<!-- 手动录入 -->
+        <view class='item-wrapper' >
+          <view class="item-box" wx:if="{{item.source==1}}">
+            <view>
+              <image class='avator' 
+              wx:if="{{item.avatar}}" src='{{avatar+item.avatar}}'></image>
+                <image class='avator' wx:else src='{{path}}'></image>
+            </view>
+
+            <view class='mid'>
+              <text class='name'>{{item.realname}}</text>
+              <view class='tip-box'>
+                <text class='tip'>{{item.expectedSalary}}</text>
+                <text class='tip'>{{item.jobStatus}}</text>
+                <text class='tip'>{{item.length}}</text>
+                <text class='tip'>{{item.addr}}</text>
+              </view>
+            </view>
+
+          </view>
+<!-- 图片录入 -->
+          <image class="resume-img"  wx:if="{{item.source==2}}"
+              src='{{item.filePath}}'>
+          </image>
+          <!-- 系统导入 -->
+          <view class="item-sys" wx:if="{{item.source==3}}">
+              <view class='creat-time'><text>创建时间：</text>{{item.createDate}}</view>
+              <view class='creat-path'>{{item.filePath}}</view>
+          </view>
+ <!-- 外部导入 -->
+            <view class="item-sys" wx:if="{{item.source==4}}">
+              <view class='creat-time'><text>来源：</text>{{item.website}}</view>
+              <view class='creat-path'>{{item.filePath}}</view>
+          </view>
+        </view>
+        
+
+        <view class='action'>
+          <text class='clear' bindtap='clear' data-id="{{item.id}}">删除简历</text>
+          <text class='show' bindtap='show'  data-id="{{item.id}}">展示二维码</text>
+        </view>
+    </block >
+
+
+  </view>
+  <view class='entery-btn'>
+    <button class="btn-click" bindtap='reImport'> 重新上传 </button>
+  </view>
+</view>

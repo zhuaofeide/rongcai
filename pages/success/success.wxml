@@ -1,0 +1,12 @@
+<!--pages/success/success.wxml-->
+<view class='wrapper'>
+    <view class='msg'>
+        <image src='../../images/icon/success.png' class='msg-img'></image>
+    </view>
+    <view class='text'>
+        <text class='text-inner'>恭喜您，简历上传成功！</text>
+    </view>
+    <view class='btn-box'>
+        <button class='btn-click' bindtap='viewCode'>查看二维码</button>
+    </view>
+</view>

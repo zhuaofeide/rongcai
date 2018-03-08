@@ -1,0 +1,14 @@
+<!--pages/image-interview/image-interview.wxml-->
+<view class='img-wrapper'>
+
+  <view class='imag-content'>
+    <image src='{{img}}' class='bg-img'></image>
+    <image src='{{limg}}' 
+    class="ca-img"   bindtap='selectImg'></image>
+    <view class='add-bt'>
+      <button class="btn-click" bindtap="saveInfor" disabled='{{up}}'> 确认上传 </button>
+    </view>
+  </view>
+
+
+</view>

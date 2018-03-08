@@ -1,0 +1,27 @@
+/* pages/no-resume/no-resume.wxss */
+.no-wrapper{
+  padding: 20rpx;
+}
+.no-content{
+  padding: 60rpx 0;
+}
+.no-img{
+  width: 100%;
+}
+.no-text{
+  padding: 20rpx 0;
+  font-size: 32rpx;
+  line-height: 48rpx;
+  color: #666;
+  text-align: center;
+}
+.btn-click {
+  background-color: #349fec;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 36rpx;
+  width:95%;
+}
+.button-hover {
+  background-color: #1c95ec;
+}

@@ -1,0 +1,51 @@
+/* pages/expDes/expDes.wxss */
+.no-order{
+  text-align: center;
+  padding: 40rpx 20rpx;
+  position: absolute;
+  top:35%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.no-data-img{
+  width: 392rpx;
+  height: 256rpx;
+}
+.des-text {
+  background: #fff;
+  padding: 20rpx;
+}
+
+::-webkit-input-placeholder {
+  color: #999;
+}
+:-moz-placeholder{
+    color: #999;
+}
+:-ms-input-placeholder{
+   color: #999;
+}
+.des-area {
+  width: 100%;
+  font-size: 36rpx;
+  line-height: 48rpx;
+  color: #000;
+}
+.des-counter{
+  text-align: right;
+  padding: 10rpx 20rpx;
+  color: #999;
+}
+.des-btn{
+  padding: 40rpx 0;
+}
+  .btn-click{
+    background-color: #349FEC;
+    color: #fff;
+    border-radius:30px; 
+     font-size:36rpx;
+     width: 95%;
+  }
+  .button-hover {
+  background-color: #1c95ec;
+}

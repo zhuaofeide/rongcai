@@ -1,0 +1,29 @@
+<!--pages/login/login.wxml-->
+<view class='login'>
+  <view class='content'>
+    <view class='item'>
+      <input class='login-input' bindinput="userNameInput" 
+      value='{{userName}}' placeholder="请输入智联账号" auto-focus type="text" />
+    </view>
+    <view class='item'>
+      <input class='login-input' bindinput="passWdInput"  value='{{userPwd}}' 
+       placeholder="请输入密码" password type="text" />
+    </view>
+    <!-- 验证码 -->
+    <view class="line-code"  hidden="{{status ? false : true}}">
+    <!-- {{(status==-1) ? '':'show'}}" -->
+      <view class="code-img">
+        <view class='set-code'>
+          <input placeholder='请输入验证码' 
+          bindinput="codeInput" value='{{code}}' class='code-input' />
+        </view>
+        <image class='img' src='{{codeImg}}' bindtap='getcode'></image>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='btn-box'>
+    <button class='btn-click' bindtap='login'>确定</button>
+  </view>
+</view>

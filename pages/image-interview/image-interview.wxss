@@ -1,0 +1,42 @@
+/* pages/image-interview/image-interview.wxss */
+.imag-content{
+  position: fixed;
+  width: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+  height: 100%;
+  padding-bottom: 150rpx;
+}
+.bg-img{
+  width: 100%;
+  height: 100%;
+}
+.ca-img{
+  position: absolute;
+  width: 200rpx;
+  height: 200rpx;
+  top:40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+/* 按钮 */
+.add-bt{
+  /* position: fixed; */
+  width: 100%;
+  left:0;
+  bottom:0;
+  padding: 30rpx 0;
+  background: #fff;
+}
+.btn-click{
+    background-color: #349FEC;
+    color: #fff;
+    border-radius:30px; 
+     font-size:36rpx;
+     width: 95%;
+  }
+  .button-hover {
+   background-color: #1c95ec; 
+   /* background-color: #D4D4D4; */
+}

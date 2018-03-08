@@ -1,0 +1,35 @@
+<!--pages/import-interview/import-interview.wxml-->
+<view class='wrapper'>
+  <view class='content'>
+
+    <view class='path-item'  bindtap="login">
+      <view class='img-box'>
+        <image class='item-img' src='../../images/icon/zl2.png'></image>
+      </view>
+
+      <text class='item-text'>智联招聘</text>
+    </view>
+
+    <view class='path-item' bindtap="login">
+      <view class='img-box'>
+        <image class='item-img' src='../../images/icon/58job.png'></image>
+      </view>
+      <text class='item-text'>58同城</text>
+    </view>
+
+    <view class='path-item' bindtap="login">
+      <view class='img-box'>
+        <image class='item-img' src='../../images/icon/lg.png'></image>
+      </view>
+      <text class='item-text'>拉勾网</text>
+    </view>
+
+
+    <view class='path-item' bindtap="login">
+      <view class='img-box'>
+        <image class='item-img' src='../../images/icon/51job.png'></image>
+      </view>
+      <text class='item-text'>51job</text>
+    </view>
+  </view>
+</view>

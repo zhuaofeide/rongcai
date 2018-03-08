@@ -1,0 +1,2 @@
+<!--pages/login-view-detail/view-detail.wxml-->
+<web-view src="{{url}}"></web-view>

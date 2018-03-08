@@ -1,0 +1,250 @@
+<!--pages/baseInfor/baseInfor.wxml-->
+<view class="baseInfor">
+  <form bindsubmit="formSubmit" class="base-content">
+    <!-- 头部 -->
+    <view class="base-header">
+      <text>  </text>
+      <view class="header-avator">
+          <image class="avator-1" wx:if="{{baseInfor.avatar}}" 
+          src='{{avatarPath+path1}}' bindtap='selectImg'></image>  
+
+           <image class="avator-1" wx:esle src='{{path}}' bindtap='selectImg'></image> 
+        <image class="avator-2 " src='../../images/icon/cam.png'></image>
+      </view>
+      <text></text>
+    </view>
+
+    <!-- 主体 -->
+    <view class="base-box">
+      <!-- 姓名 -->
+      <view class="base-item">
+        <view class="base-title">
+          姓名
+        </view>
+            <view class='base-action'>
+          <view class="phone">
+            <input placeholder="姓名" 
+            focus="{{focus}}" maxlength='20' value='{{relname}}' bindchange="relname" type="text" />
+          </view>
+        </view>
+      </view>
+
+      <!-- 性别 -->
+      <view class="base-item">
+        <view class="base-title">
+          性别
+        </view>
+        <view class='base-action'>
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{sex}}">
+            <view class="picker">
+              <!-- {{sex[index]}} -->
+              {{gender}}
+            </view>
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+
+        </view>
+
+      </view>
+
+
+      <!-- 出生日期 -->
+      <view class="base-item">
+        <view class="base-title">
+          出生日期
+        </view>
+        <view class='base-action'>
+          <picker mode="date" value="{{bdate}}" start="1900-09-01" end="2317-09-01" bindchange="bindDateChange">
+            <view class="picker">
+              {{bdate}}
+            </view>
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+        </view>
+      </view>
+
+
+      <!-- 手机号码 -->
+      <view class="base-item">
+        <view class="base-title">
+          手机号码
+        </view>
+        <view class='base-action'>
+          <view class="phone">
+            <input placeholder="请填写" focus="{{focus}}" type="number" maxlength='20' bindblur="bindKeyPhone" bindchange="phone" value='{{phone}}' />
+          </view>
+        </view>
+      </view>
+
+      <!-- 求职状态 -->
+      <view class="base-item">
+        <view class="base-title">
+          求职状态
+        </view>
+        <view class='base-action'>
+          <picker bindchange="bindStateChange" value="{{inner}}"
+           range="{{state}}">
+           <view class="picker" wx:if="{{jobStatus}}" > {{jobStatus}}</view>
+          <view class="picker" wx:elif="{{jobStatus === ''}}"> {{state[inner]}} </view>  
+            <!-- <view > -->
+              <!-- {{state[inner]}} -->
+              <!-- {{jobStatus}} -->
+             <!-- </view>  -->
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+
+        </view>
+
+      </view>
+
+      <!-- 开始工作年份 -->
+      <view class="base-item">
+        <view class="base-title">
+          开始工作年份
+        </view>
+        <view class='base-action'>
+          <picker mode="date" value="{{wdate}}" start="1900-09-01" end="2317-09-01" bindchange="bindWorkDate">
+            <view class="picker">
+              {{wdate}}
+            </view>
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+        </view>
+      </view>
+
+      <!-- 居住地 -->
+      <view class="base-item">
+        <view class="base-title">
+          居住地
+        </view>
+        <view class='base-action'>
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}}" 
+          custom-item="{{customItem}}">
+         <view class="picker" wx:if="{{region[0]!==null}}" >{{region[0]}}，{{region[1]}}，{{region[2]}}</view>
+          <view class="picker" wx:else>{{defaultSelect}}</view> 
+            <!-- <view class="picker">
+              {{region[0]}}，{{region[1]}}，{{region[2]}}
+            </view> -->
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+
+        </view>
+
+      </view>
+
+        <!-- 邮箱 -->
+      <view class="base-item">
+        <view class="base-title">
+          邮箱
+        </view>
+        <view class='base-action'>
+          <view class="phone">
+            <input placeholder="请填写" focus="{{focus}}" 
+            value='{{email}}'maxlength='20' bindchange="email" bindblur="bindKeyEmail" />
+          </view>
+        </view>
+      </view>
+
+         <!-- 证件类型 -->
+      <view class="base-item">
+        <view class="base-title">
+          证件类型
+        </view>
+        <view class='base-action'>
+          <picker bindchange="bindCardChange" value="{{cardinner}}" range="{{cardtype}}">
+            <!-- <view class="picker"> -->
+               <!-- {{cardtype[cardinner]}}  -->
+               <!-- {{idtype}} -->
+            <!-- </view> -->
+          <view class="picker" wx:if="{{idtype}}" > {{idtype}}</view>
+          <view class="picker" wx:else="{{jobStatus === ''}}"> {{cardtype[cardinner]}}</view>  
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+
+        </view>
+
+      </view>
+
+     <!-- 证件号 -->
+      <view class="base-item">
+        <view class="base-title">
+          证件号
+        </view>
+        <view class='base-action'>
+          <view class="phone">
+            <input placeholder="请填写" type="idcard" focus="{{focus}}" maxlength='20' bindblur="bindKeyCard" value='{{idcard}}' bindchange="idCard"  />
+          </view>
+        </view>
+      </view>
+
+    <!-- 户籍所在地 -->
+      <view class="base-item">
+        <view class="base-title">
+          户籍所在地
+        </view>
+        <view class='base-action'>
+          <picker mode="region" bindchange="bindLocalChange" value="{{local}}" 
+          custom-item="{{customItem}}">
+  
+                     <view class="picker" wx:if="{{local[0]!==null}}" > {{local[0]}}，{{local[1]}}，{{local[2]}}</view>
+          <view class="picker" wx:else>{{defaultSelect}}</view> 
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+        </view>
+      </view>
+
+    <!-- 婚姻状态 -->
+      <view class="base-item">
+        <view class="base-title">
+          婚姻状态
+        </view>
+        <view class='base-action'>
+          <picker bindchange="bindStatusChange" value="{{lip}}" range="{{status}}">
+            <view class="picker">
+              <!-- {{status[lip]}} -->
+              {{marriage}}
+            </view>
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+        </view>
+      </view>
+
+    </view>
+      <!-- 点击按钮 -->
+       <view class="entery-btn">
+            <button class="btn-click" formType="submit"> 保存 </button>
+      </view>
+  </form>
+</view>

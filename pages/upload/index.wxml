@@ -1,0 +1,53 @@
+<!--pages/home/home.wxml-->
+<view class="container-index">
+   <view class="wrapper-index">
+          <view class="index-item" bindtap="bindViewDetail">
+            <view class="item-left">
+              <text>   </text>
+              <image class='item-img' src="../../images/icon/entry.png" ></image>
+               <text>  </text>
+            </view>
+            <view class="item-right">
+             <text class="entery-text">手动录入</text>
+              <text class="notice-text">需要您手动填写简历信息</text>
+            </view>
+          </view>
+
+          <view class="index-item" bindtap="bindImportImg">
+            <view class="item-left">
+              <text>   </text>
+              <image class='item-img' src="../../images/icon/interview-img.png" ></image>
+               <text>  </text>
+            </view>
+            <view class="item-right">
+             <text class="entery-text">简历图片</text>
+              <text class="notice-text">将您的简历拍照上传</text>
+            </view>
+          </view>
+
+           <view class="index-item" bindtap="bindViewSystem">
+            <view class="item-left">
+              <text>   </text>
+              <image class='item-img' src="../../images/icon/rc-logo.png" ></image>
+               <text>  </text>
+            </view>
+            <view class="item-right">
+             <text class="entery-text">融才系统</text>
+              <text class="notice-text">匹配融才系统，获取您的简历</text>
+            </view>
+          </view>
+
+
+            <view class="index-item" bindtap="bindImport">
+              <view class="item-left">
+              <text>   </text>
+              <image class='item-img' src="../../images/icon/import.png" ></image>
+               <text>  </text>
+                </view>
+                <view class="item-right">
+             <text class="entery-text">渠道导入</text>
+                  <text class="notice-text">自动匹配招聘渠道，导入您的简历</text>
+            </view>
+          </view>
+   </view>
+</view>

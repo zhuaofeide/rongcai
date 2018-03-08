@@ -1,0 +1,140 @@
+<!--pages/addexp/addexp.wxml-->
+<view class='addexp'>
+  <form bindsubmit="formSubmit" class='add-wrapper'>
+    <view class='add-content'>
+      <!-- 入职时间 -->
+      <view class="base-item">
+        <view class="base-title">
+          入职时间
+        </view>
+        <view class='base-action'>
+          <picker mode="date" value="{{date}}" start="1900-09-01" end="2037-09-01" bindchange="bindDateChange">
+            <view class="picker">
+              {{sdate}}
+            </view>
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+
+        </view>
+
+      </view>
+      <!-- 离职时间 -->
+      <view class="base-item">
+        <view class="base-title">
+          离职时间
+        </view>
+        <view class='base-action'>
+          <picker mode="date" value="{{date}}" start="1900-09-01" end="2037-09-01" bindchange="bindeDateChange">
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+        </view>
+      </view>
+      <!-- 公司 -->
+      <view class="base-item">
+        <view class="base-title">
+          公司
+        </view>
+        <view class='base-action'>
+          <view class="phone">
+            <input placeholder="请填写" focus="{{focus}}" value="{{company}}" bindchange="bindKeyInput"/>
+          </view>
+        </view>
+      </view>
+      <!-- 职位 -->
+      <view class="base-item">
+        <view class="base-title">
+          职位
+        </view>
+        <view class='base-action'>
+          <view class="phone">
+            <input placeholder="请填写" focus="{{focus}}" value='{{position}}'  bindchange="bindKeyPosition"/>
+          </view>
+        </view>
+      </view>
+      <!-- 工作描述 -->
+      <view class="base-item">
+        <view class="base-title">
+          工作描述
+        </view>
+        <view class='base-action' bindtap='descR'>
+          <view class="picker">
+            <text class='text-count'>已填写{{length}}字</text>
+          </view>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+        </view>
+      </view>
+      <!-- 行业 -->
+      <view class="base-item">
+        <view class="base-title">
+          行业
+        </view>
+        <view class='base-action'>
+          <view class="phone">
+            <input placeholder="请填写" focus="{{focus}}" value='{{industry}}' bindchange="bindKeyIndustry"/>
+          </view>
+        </view>
+      </view>
+      <!-- 公司规模 -->
+      <view class="base-item">
+        <view class="base-title">
+          公司规模
+        </view>
+        <view class='base-action'>
+          <picker bindchange="bindStateChange" value="{{inner}}" range="{{state}}">
+            <view class="picker">
+              {{companySize}}
+            </view>
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+
+        </view>
+
+      </view>
+      <!-- 工作类型 -->
+      <view class="base-item">
+        <view class="base-title">
+          工作类型
+        </view>
+        <view class='base-action'>
+          <picker bindchange="bindStatusChange" value="{{lip}}" range="{{status}}">
+            <view class="picker">
+              {{workType}}
+            </view>
+          </picker>
+          <view class='right-icon'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+
+        </view>
+
+      </view>
+    </view>
+
+    <!-- 保存 -->
+    <view class='add-bt'>
+      <button class="btn-click" formType="submit"> 保存 </button>
+    </view>
+
+  </form>
+</view>

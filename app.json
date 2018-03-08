@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/upload/index",
+    "pages/my-resume/my-resume",
+    "pages/home/home",
+    "pages/logs/logs",
+    "pages/center/center",
+    "pages/entery-interview/entery-interview",
+    "pages/workInfor/workInfor",
+    "pages/image-interview/image-interview",
+    "pages/system-interview/system-interview",
+    "pages/import-interview/import-interview",
+    "pages/baseInfor/baseInfor",
+    "pages/eduInfor/eduInfor",
+    "pages/expInfor/expInfor",
+    "pages/proInfor/proInfor",
+    "pages/addexp/addexp",
+    "pages/expDes/expDes",
+    "pages/id-expDes/expDes",
+    "pages/id-prodes/prodes",
+    "pages/id-resdes/resdes",
+    "pages/addedu/addedu",
+    "pages/assessment/assessment",
+    "pages/addpro/addpro",
+    "pages/prodes/prodes",
+    "pages/resdes/resdes",
+    "pages/view-resume/view-resume",
+    "pages/resume-detail/resume-detail",
+    "pages/no-resume/no-resume",
+    "pages/login/login",
+    "pages/login-view/login-view",
+    "pages/login-detail/login-detail",
+    "pages/code/code",
+    "pages/success/success",
+    "pages/viewexp/viewexp",
+    "pages/viewedu/viewedu",
+    "pages/viewpro/viewpro",
+    "pages/login-view-detail/view-detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#349FEC",
+    "navigationBarTitleText": "融才简历",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#349FEC",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "box-shadow": "0 0 6px 0",
+    "list": [
+      {
+        "pagePath": "pages/upload/index",
+        "iconPath": "images/nav/interview-off.png",
+        "selectedIconPath": "images/nav/interview-on.png",
+        "text": "简历"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/nav/center-off.png",
+        "selectedIconPath": "images/nav/center-on.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+<!--pages/entery-interview/entery-interview.wxml-->
+<view class="entery">
+  <view class="entery-content">
+
+    <!-- 1 -->
+    <view class="entry-item" bindtap="baseInfor">
+      <view class='entery-item-left'>
+        <image class='left-icon' src="../../images/icon/base.png"></image>
+
+        <text class="left-text">基本信息</text>
+      </view>
+
+      <view class='entery-item-right'>
+        <image class="right-icon" src="../../images/icon/right.png">
+        </image>
+      </view>
+
+    </view>
+
+    <!-- 2 -->
+    <view class="entry-item" bindtap='expInfor'>
+      <view class='entery-item-left'>
+        <image class='left-icon' src="../../images/icon/exp.png"></image>
+
+        <text class="left-text">工作经验</text>
+      </view>
+
+      <view class='entery-item-right'>
+        <image class="right-icon" src="../../images/icon/right.png">
+        </image>
+      </view>
+
+    </view>
+
+    <!-- 3 -->
+    <view class="entry-item" bindtap='eduInfor'>
+      <view class='entery-item-left'>
+        <image class='left-icon' src="../../images/icon/edu.png"></image>
+
+        <text class="left-text">教育经历</text>
+      </view>
+
+      <view class='entery-item-right'>
+        <image class="right-icon" src="../../images/icon/right.png">
+        </image>
+      </view>
+
+    </view>
+
+    <!-- 4 -->
+    <view class="entry-item" bindtap='workInfor'>
+      <view class='entery-item-left'>
+        <image class='left-icon' src="../../images/icon/base.png"></image>
+
+        <text class="left-text">求职意向</text>
+      </view>
+
+      <view class='entery-item-right'>
+        <image class="right-icon" src="../../images/icon/right.png">
+        </image>
+      </view>
+
+    </view>
+    <!-- 5 -->
+    <view class="entry-item" bindtap='proInfor'>
+      <view class='entery-item-left'>
+        <image class='left-icon' src="../../images/icon/base.png"></image>
+
+        <text class="left-text">项目经验</text>
+      </view>
+
+      <view class='entery-item-right'>
+        <image class="right-icon" src="../../images/icon/right.png">
+        </image>
+      </view>
+
+    </view>
+  </view>
+  <!-- 保存信息 -->
+  <view class="entery-btn">
+    <button class="btn-click" bindtap='importIt'> 确认录入 </button>
+  </view>
+</view>

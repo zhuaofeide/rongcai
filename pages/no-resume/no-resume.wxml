@@ -1,0 +1,12 @@
+<!--pages/no-resume/no-resume.wxml-->
+<view class='no-resume'>
+    <view class='no-wrapper'>
+        <image src='../../images/icon/no-inter.png' class='no-img'></image>
+        <view class='no-text'>
+            很遗憾，融才系统没有您的简历哦~
+        </view>
+    </view>
+    <view class='no-content'>
+        <button class="btn-click" bindtap="backInfor"> 朕知道了 </button>
+    </view>
+</view>

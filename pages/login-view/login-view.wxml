@@ -1,0 +1,19 @@
+<!--pages/login-view/login-view.wxml-->
+<view>
+  <view class='resume-content'>
+    <radio-group class='resume-item' bindchange="radioChange" wx:if="{{items!==null}}">
+       
+        <label class="radio" wx:key='{{items}}' wx:for="{{items}}">
+          <text class='resume-name'> {{item.name}}</text>
+          <radio class='resume-radio' value="{{item.url}}" checked="{{item.checked}}" color='#1c95ec' />
+        </label>
+
+    </radio-group>
+
+    <!-- <web-view src='{{url}}'></web-view>       -->
+  </view>
+  <view class='resume-box' wx:if="{{items!==null}}">
+          <button class=" btn-view" hover-class="btn-view-hover" bindtap="viewInfor"> 预览 </button>
+            <button class="btn-click" bindtap="saveInfor"> 导入 </button>
+  </view>
+</view>

@@ -1,0 +1,52 @@
+/* pages/entery-interview/entery-interview.wxss */
+
+.entery-content {
+  background: #fff;
+  padding-top: 20rpx;
+}
+
+.entry-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.entery-item-left {
+  display: flex;
+  align-items: flex-start;
+}
+
+.left-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+
+.right-icon {
+  width: 20rpx;
+  height: 40rpx;
+  vertical-align: bottom;
+}
+
+.left-text {
+  font-size: 36rpx;
+  line-height: 60rpx;
+  display: inline-block;
+  color: #333;
+}
+
+.entery-btn {
+  padding: 80rpx 20rpx 0 20rpx;
+}
+
+.btn-click {
+  background-color: #349fec;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 36rpx;
+}
+
+.button-hover {
+  background-color: #1c95ec;
+}

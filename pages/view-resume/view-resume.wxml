@@ -1,0 +1,25 @@
+<!--pages/view-resume/view-resume.wxml-->
+<view>
+  <view class='resume-content'>
+  <!-- 有数据 -->
+    <radio-group wx:if="{{items!==null}}" 
+      class='resume-item' bindchange="radioChange">
+        <label class="radio" wx:key='{{items}}' wx:for="{{items}}">
+          <text class='resume-name'> {{item.resumeName}}</text>
+          <radio class='resume-radio' 
+          value="{{item.url}}"  checked="{{item.checked}}" color='#1c95ec' />
+        </label>
+    </radio-group>
+    
+    <!-- 无数据 -->
+        <view wx:else class="no-order" >
+          <image src='../../images/icon/no-data.png' class='no-data-img'></image>
+          <view class="text">暂无数据</view>
+      </view>
+  </view>
+  <view class='resume-box' wx:if="{{items!==null}}">
+          <button class=" btn-view" 
+          hover-class="btn-view-hover" bindtap="viewInfor"> 预览 </button>
+          <button class="btn-click" bindtap="saveInfor"> 确定 </button>
+  </view>
+</view>

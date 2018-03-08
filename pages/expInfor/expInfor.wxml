@@ -1,0 +1,50 @@
+<!--pages/expInfor/expInfor.wxml-->
+<view class='exp'>
+  <view class='exp-wrapper'>
+
+    <view class='exp-content'>
+      <!-- 有数据 -->
+      <scroll-view class="exp-list" scroll-y="true" wx-else
+      style="height:100%;" bindscrolltoupper="refesh"
+       bindscrolltolower="loadMore" >
+<!-- hidden="{{expList ? false : true}}" -->
+        <view class='exp-item' bindtap='viewExp' wx:for="{{expList}}" 
+        wx:key="{{index}}" data-id="{{item.id}}">
+          <view class='exp-left'>
+            <view>
+              <text class='exp-text'>{{item.company}}</text>
+            </view>
+
+            <view>
+              <text class='exp-time'>{{item.entryDate}}</text>-
+              <text class='exp-time'>{{item.leaveDate}}</text>
+            </view>
+
+          </view>
+          <view class='exp-right'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+        </view>
+
+        <view class="bottom" hidden="{{hidden}}">
+          <view>{{loadMoreData}}</view>
+        </view>
+      </scroll-view>
+
+      <!-- 无数据 -->
+      <view class="no-order" wx-if="{{expList==null}}">
+        <image src='../../images/icon/no-data.png' class='no-data-img'></image>
+        <view class="text">暂无数据</view>
+      </view>
+      
+    </view>
+    <view class='exp-btn'>
+      <view class='btn-box'>
+        <button class="btn-click" bindtap="addExp" data-id="{{addId}}"> 添加工作经验 </button>
+      </view>
+    </view>
+
+  </view>
+</view>

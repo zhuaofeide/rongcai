@@ -1,0 +1,24 @@
+<!--pages/system-interview/system-interview.wxml-->
+<!--pages/validation/validation.wxml-->
+<view>
+  <view class='valid-content'>
+    <view class='valid-item'>
+      <image src='../../images/icon/phone.png' class='icon-img'></image>
+      <input placeholder="手机号" type="number" value='{{phone}}' bindinput="userPhone" auto-focus class='valid-input' />
+    </view>
+    <view class='valid-code'>
+      <view class='valid-code-img'>
+        <image src='../../images/icon/lock.png' class='icon-img'></image>
+        <input placeholder="验证码" value='{{code}}'  bindinput="userCode" type="number"  class='valid-input' />
+      </view>
+        <button class="valid-btn" disabled='{{disabled}}' bindtap="getCode"> {{time}} </button>
+    </view>
+    <view class='valid-item'>
+      <image src='../../images/icon/id-card.png' class='icon-img'></image>
+      <input placeholder="身份证" bindinput="userCard" value='{{card}}'  type="idcard" class='valid-input' />
+    </view>
+  </view>
+  <view>
+    <button class="btn-click" bindtap="saveInfor"> 确定 </button>
+  </view>
+</view>

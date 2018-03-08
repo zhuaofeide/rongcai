@@ -1,0 +1,23 @@
+<!--pages/code/code.wxml-->
+<view class='content'>
+    <view class='wrapper'>
+        <view class='msg'>
+          <view>
+            <image class='avator' src='{{path}}'></image>
+          </view>
+          <view class='resume-title'>
+            <text class='name'>王小二</text>
+            <text class='position'>高级Java开发</text>
+          </view>
+        </view>
+
+        <view class='code-img'>
+            <image  class='code-card' src='{{codepath}}'></image>
+        </view>
+        <view class='code-mgs'>
+            <text class='code-txt'>
+                扫一扫，查看简历详情
+            </text> 
+        </view>
+    </view>
+</view> 

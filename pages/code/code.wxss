@@ -1,0 +1,69 @@
+/* pages/code/code.wxss */
+
+.content {
+  padding: 60rpx 30rpx;
+}
+
+.wrapper {
+  background: #fff;
+  padding: 20rpx 0;
+}
+
+.avator {
+  width: 120rpx;
+  height: 120rpx;
+  background: 50%;
+}
+
+.msg {
+  display: flex;
+  align-items: flex-start;
+  padding: 20rpx;
+}
+
+.resume-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20rpx;
+  flex: 1 0 auto;
+}
+
+.name {
+  font-size: 36rpx;
+  line-height: 60rpx;
+  color: #333;
+  white-space: nowrap;
+  text-overflow: hidden;
+  overflow: hidden;
+}
+
+.position {
+  font-size: 28rpx;
+  line-height: 60rpx;
+  color: #666;
+  white-space: nowrap;
+  text-overflow: hidden;
+  overflow: hidden;
+}
+
+.code-img {
+  padding: 40rpx 20rpx;
+  text-align: center;
+}
+
+.code-card {
+  width: 600rpx;
+  height: 600rpx; 
+}
+
+.code-mgs {
+  padding: 20rpx;
+  text-align: center;
+}
+
+.code-txt {
+  font-size: 32rpx;
+  line-height: 36rpx;
+  color: #333;
+}

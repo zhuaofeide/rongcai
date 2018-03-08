@@ -1,0 +1,50 @@
+<!--pages/expInfor/expInfor.wxml-->
+<view class='exp'>
+  <view class='exp-wrapper'>
+
+    <view class='exp-content'>
+      <!-- 无数据 -->
+      <view class="no-order" wx-if="{{expList==null}}" >
+        <image src='../../images/icon/no-data.png' class='no-data-img'></image>
+        <view class="text">暂无数据</view>
+      </view>
+      <!-- 有数据 -->
+      <scroll-view class="exp-list" 
+          scroll-y="true" style="height: 100%;" 
+          bindscrolltoupper="refesh" 
+          bindscrolltolower="loadMore" wx-else>
+        <view class='exp-item' bindtap='viewEdu' 
+            wx:for="{{expList}}" wx:key="{{index}}" 
+            data-id="{{item.id}}">
+          <view class='exp-left'>
+            <view>
+              <text class='exp-text'>{{item.school}}</text>
+            </view>
+
+            <view>
+              <text class='exp-time'>{{item.startDate}}</text>-
+              <text class='exp-time'>{{item.graduationDate}}</text>
+            </view>
+
+          </view>
+          <view class='exp-right'>
+            <text></text>
+            <image class='action-img' src="../../images/icon/right.png"></image>
+            <text></text>
+          </view>
+        </view>
+
+
+        <view class="bottom" hidden="{{hidden}}">
+          <view>{{loadMoreData}}</view>
+        </view>
+    </scroll-view>
+  </view>
+
+  <view class='exp-btn'>
+    <view class='btn-box'>
+      <button class="btn-click" bindtap="addEdu"> 添加教育经历 </button>
+    </view>
+  </view>
+</view>
+</view>
